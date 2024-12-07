@@ -2,11 +2,12 @@ import threading, time
 
 
 class Knight(threading.Thread):
+    enemies = 100
     def __init__(self, name, power):
         threading.Thread.__init__(self)
         self.name = name
         self.power = power
-        self.enemies = 100
+        # self.enemies = Knight.enemies
 
     def run(self):
         print(f'{self.name}, на нас напали!')
